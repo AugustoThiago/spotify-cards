@@ -15,11 +15,9 @@ $.ajax({
     success: function (token) {
         console.log('Token 01:', token.access_token);
         token = token.acess_token;
-        resulta = token;
+        result = token;
     },
-
 });
-
 
 $.ajax({
     type:"GET",   
