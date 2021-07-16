@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify API</title>
+
+    <script src="https://use.fontawesome.com/67eac2d286.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- <script src="js/spotify-web-api.js"></script> -->
+    <script src="js/spotify-web.js"></script>
+    <link rel="stylesheet" href="css/spotify.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Foto</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Seguidores</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" id="foto-gazolla"></th>
+                    <td id="nome-gazolla"><i class="fab fa-spotify"></i></td>
+                    <td id="seguidores-gazolla"></td>
+                </tr>
+                <tr>
+                    <th scope="row" id="foto-brn"></th>
+                    <td id="nome-brn"><i class="fab fa-spotify"></i></td>
+                    <td id="seguidores-brn"></td>
+                </tr>
+
+                <tr data-toggle="modal" data-target="#modal-krash">
+                    <th scope="row" id="foto-krash"></th>
+                    <td id="nome-krash"></td>
+                    <td id="seguidores-krash"></td>
+                </tr>
+                <tr>
+                    <th scope="row" id="foto-jacob"></th>
+                    <td id="nome-jacob"><i class="fab fa-spotify"></i></td>
+                    <td id="seguidores-jacob"></td>
+                </tr>
+                <tr>
+                    <th scope="row" id="foto-puka"></th>
+                    <td id="nome-puka"><i class="fab fa-spotify"></i></td>
+                    <td id="seguidores-puka"></td>
+                </tr>
+                <tr>
+                    <th scope="row" id="foto-volt"></th>
+                    <td id="nome-volt"><i class="fab fa-spotify"></i></td>
+                    <td id="seguidores-volt"></td>
+                </tr>
+                <tr>
+                    <th scope="row" id="foto-gaba"></th>
+                    <td id="nome-gaba"><i class="fab fa-spotify"></i></td>
+                    <td id="seguidores-gaba"></td>
+                </tr>
+                <tr>
+                    <th scope="row" id="foto-hippo"></th>
+                    <td id="nome-hippo"><i class="fab fa-spotify"></i></td>
+                    <td id="seguidores-hippo"></td>
+                </tr>
+                <tr>
+                    <th scope="row" id="foto-cosmo"></th>
+                    <td id="nome-cosmo"><i class="fab fa-spotify"></i></td>
+                    <td id="seguidores-cosmo"></td>
+                </tr>
+                <tr>
+                    <th scope="row" id="foto-elemental"></th>
+                    <td id="nome-elemental"><i class="fab fa-spotify"></i></td>
+                    <td id="seguidores-elemental"></td>
+                </tr>
+                <tr>
+                    <th scope="row" id="foto-plastic"></th>
+                    <td id="nome-plastic"><i class="fab fa-spotify"></i></td>
+                    <td id="seguidores-plastic"></td>
+                </tr>
+                <tr>
+                    <th scope="row" id="foto-vermont"></th>
+                    <td id="nome-vermont"><i class="fab fa-spotify"></i></td>
+                    <td id="seguidores-vermont"></td>
+                </tr>
+                <tr>
+                    <th scope="row" id="foto-renan"></th>
+                    <td id="nome-renan"><i class="fab fa-spotify"></i></td>
+                    <td id="seguidores-renan"></td>
+                </tr>
+                <tr>
+                    <th scope="row" id="foto-sofat"></th>
+                    <td id="nome-sofat"><i class="fab fa-spotify"></i></td>
+                    <td id="seguidores-sofat"></td>
+                </tr>
+                <tr>
+                    <th scope="row" id="foto-flexb"></th>
+                    <td id="nome-flexb"><i class="fab fa-spotify"></i></td>
+                    <td id="seguidores-flexb"></td>
+                </tr>
+                <tr>
+                    <th scope="row" id="foto-thales"></th>
+                    <td id="nome-thales"><i class="fab fa-spotify"></i></td>
+                    <td id="seguidores-thales"></td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal Krash-->
+    <div class="modal fade" id="modal-krash" tabindex="-1" role="dialog" aria-labelledby="modalArt01" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalArt01">Artista01</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <a class="btn btn-primary" data-toggle="collapse" href="#collapse01" role="button"
+                            aria-expanded="false" aria-controls="collapse01">
+                            Biobrafia
+                        </a>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse"
+                            data-target="#collapse01" aria-expanded="false" aria-controls="collapse01">
+                            Top Tracks
+                        </button>
+                    </p>
+                    <div class="collapse" id="collapse01">
+                        <div class="card card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                            squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                            ea proident.
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    FOOTER
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
