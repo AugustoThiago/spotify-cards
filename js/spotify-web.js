@@ -1,5 +1,5 @@
-const clientId = '197f058f20614425a7683de1552719de';
-const clientSecret = 'a6e241d8de0445449913be97343c0174';
+const clientId = 'aeccdd0daa854e18ba0d5be3db207b4d';
+const clientSecret = '5d39f1fd07ab4f0db51b39e319f82ae4';
 
 
 $.ajax({
@@ -23,7 +23,7 @@ $.ajax({
     type:"GET",   
     url: 'https://api.spotify.com/v1/artists?ids=6MXMuAa4reykXVUPFaSE2q%2C3yujwOo5L5DZDOcGj8K9fj%2C1VD9v9T9bOrZXhfZ8ZAHK9%2C5IRGhffWFbNGJqS7wc7UDN%2C3Gmuv8ih6UWYlZQlM4zFgo%2C66DRc0RcwzeQcm1wKdDQ4o%2C4ESBMlhP8DUP0k5mIJ2xfJ%2C6QmiUgayhWQeUFTRtBzMT8%2C29fIOE8ckNq96NbZlktZ7a%2C5rOuAFH0SjUPYfw8czrNaP%2C7qd3q5BKu3lh5r0vVBWSzm%2C7aS93G9e7XG0GCUATQjqv0%2C3anHEyEBxuE2hsDhHVlzZi%2C01Vnbpcaztlxks2JFHYkME%2C1BkGeGrbRHYd8Wg2lQqJqR%2C4xMfBjNDW6VPe7W4Wly5W7',
     headers: {
-        'Authorization': 'Bearer ' + 'BQCwlJnfdsl22y_0wuO_3cHuEl0zV7KjIyH3jdQ-UL57sn73NpolB4jDUyU5pxcIcK7Vwi8mt55ipxqh21gTEgnFuepUKZdOoNsdXfGwCGyQVFPmbKzXWZg_tdYA8CT893U8ByNxXfa1NesVOU0O5GbfY5AGHw'
+        'Authorization': 'Bearer ' + 'BQAHQ84DCTga0csE18s0EtNvS-YCAqbMgIL2ajY-ljUwXeOJKXPIygS5nwIQS5UH9AkxYNn3YMZhed1E7JRb-tXfkyIoBCA5Vb_XDTTMfsy8yg-aDpQivpKw__-IxNgCbygRFlh5LXoggsmQciEknJoYmgUqzQ'
     },
     success: function (data) {
         console.log('Todos', data);
