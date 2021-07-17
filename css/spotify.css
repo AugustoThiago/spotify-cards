@@ -12,6 +12,7 @@ tr{
     cursor: pointer;
 }
 
+
 /* COMEÇA/ */
 
 .base-card {
@@ -44,7 +45,7 @@ tr{
 }
 
 .base-card .card:after {
-  content: 'Nike';
+  content: 'Artist';
   position: absolute;
   top: 30%;
   left: -20%;
@@ -94,13 +95,12 @@ tr{
 .base-card .card .contentBx h2 {
   position: relative;
   font-weight: 600;
-  letter-spacing: 1px;
-  color: #fff;
+  color: #fedc3d;
   margin: 0;
 }
 
 .base-card .card .contentBx .size,
-.base-card .card .contentBx .color {
+.base-card .card .contentBx .num-seguidores {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,8 +108,10 @@ tr{
   transition: 0.5s;
   opacity: 0;
   visibility: hidden;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color:#fff;
+  
 }
 
 .base-card .card:hover .contentBx .size {
@@ -118,15 +120,14 @@ tr{
   transition-delay: 0.5s;
 }
 
-.base-card .card:hover .contentBx .color {
+.base-card .card:hover .contentBx .num-seguidores {
   opacity: 1;
   visibility: visible;
   transition-delay: 0.6s;
 }
 
 .base-card .card .contentBx .size h3,
-.base-card .card .contentBx .color h3 {
-  color: #fff;
+.base-card .card .contentBx .num-seguidores h3 {
   font-weight: 300;
   font-size: 14px;
   text-transform: uppercase;
@@ -154,7 +155,7 @@ tr{
   background: #9bdc28;
 }
 
-.base-card .card .contentBx .color span {
+.base-card .card .contentBx .num-seguidores span {
   width: 20px;
   height: 20px;
   background: #ff0;
@@ -163,15 +164,15 @@ tr{
   cursor: pointer;
 }
 
-.base-card .card .contentBx .color span:nth-child(2) {
+.base-card .card .contentBx .num-seguidores span:nth-child(2) {
   background: #9bdc28;
 }
 
-.base-card .card .contentBx .color span:nth-child(3) {
+.base-card .card .contentBx .num-seguidores span:nth-child(3) {
   background: #03a9f4;
 }
 
-.base-card .card .contentBx .color span:nth-child(4) {
+.base-card .card .contentBx .num-seguidores span:nth-child(4) {
   background: #e91e63;
 }
 
@@ -191,8 +192,10 @@ tr{
 }
 
 .base-card .card:hover .contentBx a {
+  cursor: pointer;
   opacity: 1;
   transform: translateY(0px);
   transition-delay: 0.75s;
 
 }
+

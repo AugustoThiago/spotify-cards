@@ -7,9 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify API</title>
 
-    <script src="https://use.fontawesome.com/67eac2d286.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!-- <script src="js/spotify-web-api.js"></script> -->
     <script src="js/spotify-web.js"></script>
     <link rel="stylesheet" href="css/spotify.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -19,120 +17,217 @@
 <body>
 
 
-
     <div class="base-card">
         <div class="card">
             <div class="imgBx">
                 <div id="foto-gazolla"></div>
-                <!-- <img src="https://assets.codepen.io/4164355/shoes.png"> -->
             </div>
-            <div class="contentBx">                
+            <div class="contentBx">
                 <h2 id="nome-gazolla"></h2>
-                <div id="seguidores-gazolla" class="num-seguidores"></div>
-                <a href="#">ABRE CARD</a>
+                <h3 id="seguidores-gazolla" class="num-seguidores"></h3>
+                <a data-toggle="modal" data-target="#modal-gazolla">Maiores Infos</a>
             </div>
         </div>
     </div>
 
-    <div class="table-responsive">
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th scope="col">Foto</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Seguidores</th>
-
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row" id="foto-gazolla"></th>
-                    <td id="nome-gazolla"><i class="fab fa-spotify"></i></td>
-                    <td id="seguidores-gazolla"></td>
-                </tr>
-                <tr>
-                    <th scope="row" id="foto-brn"></th>
-                    <td id="nome-brn"><i class="fab fa-spotify"></i></td>
-                    <td id="seguidores-brn"></td>
-                </tr>
-
-                <tr data-toggle="modal" data-target="#modal-krash">
-                    <th scope="row" id="foto-krash"></th>
-                    <td id="nome-krash"></td>
-                    <td id="seguidores-krash"></td>
-                </tr>
-                <tr>
-                    <th scope="row" id="foto-jacob"></th>
-                    <td id="nome-jacob"><i class="fab fa-spotify"></i></td>
-                    <td id="seguidores-jacob"></td>
-                </tr>
-                <tr>
-                    <th scope="row" id="foto-puka"></th>
-                    <td id="nome-puka"><i class="fab fa-spotify"></i></td>
-                    <td id="seguidores-puka"></td>
-                </tr>
-                <tr>
-                    <th scope="row" id="foto-volt"></th>
-                    <td id="nome-volt"><i class="fab fa-spotify"></i></td>
-                    <td id="seguidores-volt"></td>
-                </tr>
-                <tr>
-                    <th scope="row" id="foto-gaba"></th>
-                    <td id="nome-gaba"><i class="fab fa-spotify"></i></td>
-                    <td id="seguidores-gaba"></td>
-                </tr>
-                <tr>
-                    <th scope="row" id="foto-hippo"></th>
-                    <td id="nome-hippo"><i class="fab fa-spotify"></i></td>
-                    <td id="seguidores-hippo"></td>
-                </tr>
-                <tr>
-                    <th scope="row" id="foto-cosmo"></th>
-                    <td id="nome-cosmo"><i class="fab fa-spotify"></i></td>
-                    <td id="seguidores-cosmo"></td>
-                </tr>
-                <tr>
-                    <th scope="row" id="foto-elemental"></th>
-                    <td id="nome-elemental"><i class="fab fa-spotify"></i></td>
-                    <td id="seguidores-elemental"></td>
-                </tr>
-                <tr>
-                    <th scope="row" id="foto-plastic"></th>
-                    <td id="nome-plastic"><i class="fab fa-spotify"></i></td>
-                    <td id="seguidores-plastic"></td>
-                </tr>
-                <tr>
-                    <th scope="row" id="foto-vermont"></th>
-                    <td id="nome-vermont"><i class="fab fa-spotify"></i></td>
-                    <td id="seguidores-vermont"></td>
-                </tr>
-                <tr>
-                    <th scope="row" id="foto-renan"></th>
-                    <td id="nome-renan"><i class="fab fa-spotify"></i></td>
-                    <td id="seguidores-renan"></td>
-                </tr>
-                <tr>
-                    <th scope="row" id="foto-sofat"></th>
-                    <td id="nome-sofat"><i class="fab fa-spotify"></i></td>
-                    <td id="seguidores-sofat"></td>
-                </tr>
-                <tr>
-                    <th scope="row" id="foto-flexb"></th>
-                    <td id="nome-flexb"><i class="fab fa-spotify"></i></td>
-                    <td id="seguidores-flexb"></td>
-                </tr>
-                <tr>
-                    <th scope="row" id="foto-thales"></th>
-                    <td id="nome-thales"><i class="fab fa-spotify"></i></td>
-                    <td id="seguidores-thales"></td>
-
-                </tr>
-            </tbody>
-        </table>
+    <div class="base-card">
+        <div class="card">
+            <div class="imgBx">
+                <div id="foto-brn"></div>
+            </div>
+            <div class="contentBx">
+                <h2 id="nome-brn"></h2>
+                <h3 id="seguidores-brn" class="num-seguidores"></h3>
+                <a data-toggle="modal" data-target="#modal-brn">Maiores Infos</a>
+            </div>
+        </div>
     </div>
 
-    <!-- Modal Krash-->
-    <div class="modal fade" id="modal-krash" tabindex="-1" role="dialog" aria-labelledby="modalArt01" aria-hidden="true">
+    <div class="base-card">
+        <div class="card">
+            <div class="imgBx">
+                <div id="foto-krash"></div>
+            </div>
+            <div class="contentBx">
+                <h2 id="nome-krash"></h2>
+                <h3 id="seguidores-krash" class="num-seguidores"></h3>
+                <a data-toggle="modal" data-target="#modal-krash">Maiores Infos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="base-card">
+        <div class="card">
+            <div class="imgBx">
+                <div id="foto-jacob"></div>
+            </div>
+            <div class="contentBx">
+                <h2 id="nome-jacob"></h2>
+                <h3 id="seguidores-jacob" class="num-seguidores"></h3>
+                <a data-toggle="modal" data-target="#modal-jacob">Maiores Infos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="base-card">
+        <div class="card">
+            <div class="imgBx">
+                <div id="foto-puka"></div>
+            </div>
+            <div class="contentBx">
+                <h2 id="nome-puka"></h2>
+                <h3 id="seguidores-puka" class="num-seguidores"></h3>
+                <a data-toggle="modal" data-target="#modal-puka">Maiores Infos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="base-card">
+        <div class="card">
+            <div class="imgBx">
+                <div id="foto-volt"></div>
+            </div>
+            <div class="contentBx">
+                <h2 id="nome-volt"></h2>
+                <h3 id="seguidores-volt" class="num-seguidores"></h3>
+                <a data-toggle="modal" data-target="#modal-volt">Maiores Infos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="base-card">
+        <div class="card">
+            <div class="imgBx">
+                <div id="foto-gaba"></div>
+            </div>
+            <div class="contentBx">
+                <h2 id="nome-gaba"></h2>
+                <h3 id="seguidores-gaba" class="num-seguidores"></h3>
+                <a data-toggle="modal" data-target="#modal-gaba">Maiores Infos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="base-card">
+        <div class="card">
+            <div class="imgBx">
+                <div id="foto-hippo"></div>
+            </div>
+            <div class="contentBx">
+                <h2 id="nome-hippo"></h2>
+                <h3 id="seguidores-hippo" class="num-seguidores"></h3>
+                <a data-toggle="modal" data-target="#modal-hippo">Maiores Infos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="base-card">
+        <div class="card">
+            <div class="imgBx">
+                <div id="foto-cosmo"></div>
+            </div>
+            <div class="contentBx">
+                <h2 id="nome-cosmo"></h2>
+                <h3 id="seguidores-cosmo" class="num-seguidores"></h3>
+                <a data-toggle="modal" data-target="#modal-cosmo">Maiores Infos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="base-card">
+        <div class="card">
+            <div class="imgBx">
+                <div id="foto-elemental"></div>
+            </div>
+            <div class="contentBx">
+                <h2 id="nome-elemental"></h2>
+                <h3 id="seguidores-elemental" class="num-seguidores"></h3>
+                <a data-toggle="modal" data-target="#modal-elemental">Maiores Infos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="base-card">
+        <div class="card">
+            <div class="imgBx">
+                <div id="foto-plastic"></div>
+            </div>
+            <div class="contentBx">
+                <h2 id="nome-plastic"></h2>
+                <h3 id="seguidores-plastic" class="num-seguidores"></h3>
+                <a data-toggle="modal" data-target="#modal-plastic">Maiores Infos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="base-card">
+        <div class="card">
+            <div class="imgBx">
+                <div id="foto-vermont"></div>
+            </div>
+            <div class="contentBx">
+                <h2 id="nome-vermont"></h2>
+                <h3 id="seguidores-vermont" class="num-seguidores"></h3>
+                <a data-toggle="modal" data-target="#modal-vermont">Maiores Infos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="base-card">
+        <div class="card">
+            <div class="imgBx">
+                <div id="foto-renan"></div>
+            </div>
+            <div class="contentBx">
+                <h2 id="nome-renan"></h2>
+                <h3 id="seguidores-renan" class="num-seguidores"></h3>
+                <a data-toggle="modal" data-target="#modal-renan">Maiores Infos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="base-card">
+        <div class="card">
+            <div class="imgBx">
+                <div id="foto-sofat"></div>
+            </div>
+            <div class="contentBx">
+                <h2 id="nome-sofat"></h2>
+                <h3 id="seguidores-sofat" class="num-seguidores"></h3>
+                <a data-toggle="modal" data-target="#modal-sofat">Maiores Infos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="base-card">
+        <div class="card">
+            <div class="imgBx">
+                <div id="foto-flexb"></div>
+            </div>
+            <div class="contentBx">
+                <h2 id="nome-flexb"></h2>
+                <h3 id="seguidores-flexb" class="num-seguidores"></h3>
+                <a data-toggle="modal" data-target="#modal-flexb">Maiores Infos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="base-card">
+        <div class="card">
+            <div class="imgBx">
+                <div id="foto-thales"></div>
+            </div>
+            <div class="contentBx">
+                <h2 id="nome-thales"></h2>
+                <h3 id="seguidores-thales" class="num-seguidores"></h3>
+                <a data-toggle="modal" data-target="#modal-thales">Maiores Infos</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Gazolla-->
+    <div class="modal fade" id="modal-gazolla" tabindex="-1" role="dialog" aria-labelledby="modalArt01"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -147,8 +242,8 @@
                             aria-expanded="false" aria-controls="collapse01">
                             Biobrafia
                         </a>
-                        <button class="btn btn-primary" type="button" data-toggle="collapse"
-                            data-target="#collapse01" aria-expanded="false" aria-controls="collapse01">
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse01"
+                            aria-expanded="false" aria-controls="collapse01">
                             Top Tracks
                         </button>
                     </p>
