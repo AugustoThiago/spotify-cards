@@ -23,7 +23,7 @@ $.ajax({
     type:"GET",   
     url: 'https://api.spotify.com/v1/artists?ids=6MXMuAa4reykXVUPFaSE2q%2C3yujwOo5L5DZDOcGj8K9fj%2C1VD9v9T9bOrZXhfZ8ZAHK9%2C5IRGhffWFbNGJqS7wc7UDN%2C3Gmuv8ih6UWYlZQlM4zFgo%2C66DRc0RcwzeQcm1wKdDQ4o%2C4ESBMlhP8DUP0k5mIJ2xfJ%2C6QmiUgayhWQeUFTRtBzMT8%2C29fIOE8ckNq96NbZlktZ7a%2C5rOuAFH0SjUPYfw8czrNaP%2C7qd3q5BKu3lh5r0vVBWSzm%2C7aS93G9e7XG0GCUATQjqv0%2C3anHEyEBxuE2hsDhHVlzZi%2C01Vnbpcaztlxks2JFHYkME%2C1BkGeGrbRHYd8Wg2lQqJqR%2C4xMfBjNDW6VPe7W4Wly5W7',
     headers: {
-        'Authorization': 'Bearer ' + 'BQAHQ84DCTga0csE18s0EtNvS-YCAqbMgIL2ajY-ljUwXeOJKXPIygS5nwIQS5UH9AkxYNn3YMZhed1E7JRb-tXfkyIoBCA5Vb_XDTTMfsy8yg-aDpQivpKw__-IxNgCbygRFlh5LXoggsmQciEknJoYmgUqzQ'
+        'Authorization': 'Bearer ' + 'BQAqsnj9L7gg0Zjgg9t2mpp_Gy3_-t1PrkagQ9Essex3vvQr-jRT04QUni6-OPDe1jxgWSJ-LYmW_R-pxq71oLNUBqDV9HuaDXcMWAZrD_D5gjGPBtQYaXy5YcHzW1QuMK0T1STEu6SMZhMc4gFZPCG9DH_4PQ'
     },
     success: function (data) {
         console.log('Todos', data);
