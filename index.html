@@ -8,7 +8,10 @@
     <title>Spotify API</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- <script src="js/app.js"></script>
+    <script src="js/spotify-wrapper.js"></script> -->
     <script src="js/spotify-web.js"></script>
+    
     <link rel="stylesheet" href="css/spotify.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -27,6 +30,7 @@
             </div>
         </div>
     </div>
+    <div id="cont-gazolla"></div>
 
     <div class="base-card">
         <div class="card">
@@ -224,7 +228,7 @@
     </div>
 
     <!-- Modal Gazolla-->
-    <div class="modal fade" id="modal-gazolla" tabindex="-1" role="dialog" aria-labelledby="titulo-gazolla"
+  <div class="modal fade" id="modal-gazolla" tabindex="-1" role="dialog" aria-labelledby="titulo-gazolla"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
@@ -250,7 +254,7 @@
                             <div id="bio-gazolla" class="collapse show" aria-labelledby="head-bio-gazolla"
                                 data-parent="#accordion-gazolla">
                                 <div class="card-body">
-                                        ***BIO***
+                                    ***BIO***
                                 </div>
                             </div>
                         </div>
@@ -316,8 +320,7 @@
     </div>
 
     <!-- Modal BRN-->
-    <div class="modal fade" id="modal-brn" tabindex="-1" role="dialog" aria-labelledby="titulo-brn"
-        aria-hidden="true">
+    <div class="modal fade" id="modal-brn" tabindex="-1" role="dialog" aria-labelledby="titulo-brn" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -342,7 +345,17 @@
                             <div id="bio-brn" class="collapse show" aria-labelledby="head-bio-brn"
                                 data-parent="#accordion-brn">
                                 <div class="card-body">
-                                    Bruno Pacheco, ou BRN, de 23 anos, é uma das principais promessas na cena eletrônica. Rapidamente se tornou um nome em ascensão no mercado, recebendo suportes, fazendo collabs com grandes artistas, e, sendo notícia nos principais veículos de comunicação de música eletrônica, alcançando assim, milhares de pessoas. Recentemente, BRN lançou a calorosa "Feeling", ao lado de um dos principais artistas da atualidade, Gustavo Mota, com números que já chegam a quase 1 milhão de plays em todas plataformas, logo em seguida, emplacou outro lançamento pela gigante House Mag. BRN já recebeu suporte de artistas como Gustavo Mota, Gabriel Boni, Liu, Groove Delight e etc. Seu estilo atualmente transita entre Bass House/Tech House com muita melodia e baixos fortes, buscando trazer grandes emoções nos seus ouvintes, garantindo assim, uma energia intensa com suas produções e apresentações.
+                                    Bruno Pacheco, ou BRN, de 23 anos, é uma das principais promessas na cena
+                                    eletrônica. Rapidamente se tornou um nome em ascensão no mercado, recebendo
+                                    suportes, fazendo collabs com grandes artistas, e, sendo notícia nos principais
+                                    veículos de comunicação de música eletrônica, alcançando assim, milhares de pessoas.
+                                    Recentemente, BRN lançou a calorosa "Feeling", ao lado de um dos principais artistas
+                                    da atualidade, Gustavo Mota, com números que já chegam a quase 1 milhão de plays em
+                                    todas plataformas, logo em seguida, emplacou outro lançamento pela gigante House
+                                    Mag. BRN já recebeu suporte de artistas como Gustavo Mota, Gabriel Boni, Liu, Groove
+                                    Delight e etc. Seu estilo atualmente transita entre Bass House/Tech House com muita
+                                    melodia e baixos fortes, buscando trazer grandes emoções nos seus ouvintes,
+                                    garantindo assim, uma energia intensa com suas produções e apresentações.
                                 </div>
                             </div>
                         </div>
@@ -408,7 +421,8 @@
     </div>
 
     <!--MODAL KRASH-->
-    <div class="modal fade" id="modal-krash" tabindex="-1" role="dialog" aria-labelledby="titulo-krash" aria-hidden="true">
+    <div class="modal fade" id="modal-krash" tabindex="-1" role="dialog" aria-labelledby="titulo-krash"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -429,7 +443,7 @@
                                     </button>
                                 </h5>
                             </div>
-    
+
                             <div id="bio-krash" class="collapse show" aria-labelledby="head-bio-krash"
                                 data-parent="#accordion-krash">
                                 <div class="card-body">
@@ -441,7 +455,8 @@
                             <div class="card-header" id="head-toptracks-krash">
                                 <h5 class="mb-0">
                                     <button class="btn btn-link collapsed" data-toggle="collapse"
-                                        data-target="#toptracks-krash" aria-expanded="false" aria-controls="toptracks-krash">
+                                        data-target="#toptracks-krash" aria-expanded="false"
+                                        aria-controls="toptracks-krash">
                                         TOP TRACKS ARTISTA
                                     </button>
                                 </h5>
@@ -482,13 +497,13 @@
                                             <div id="track-krash_9">9</div>
                                         </div>
                                     </div>
-    
+
                                 </div>
                             </div>
                         </div>
                     </div>
-    
-    
+
+
                 </div>
                 <div class="modal-footer">
                     FOOTER
@@ -498,7 +513,8 @@
     </div>
 
     <!--MODAL JACOB-->
-    <div class="modal fade" id="modal-jacob" tabindex="-1" role="dialog" aria-labelledby="titulo-jacob" aria-hidden="true">
+    <div class="modal fade" id="modal-jacob" tabindex="-1" role="dialog" aria-labelledby="titulo-jacob"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -519,7 +535,7 @@
                                     </button>
                                 </h5>
                             </div>
-    
+
                             <div id="bio-jacob" class="collapse show" aria-labelledby="head-bio-jacob"
                                 data-parent="#accordion-jacob">
                                 <div class="card-body">
@@ -531,7 +547,8 @@
                             <div class="card-header" id="head-toptracks-jacob">
                                 <h5 class="mb-0">
                                     <button class="btn btn-link collapsed" data-toggle="collapse"
-                                        data-target="#toptracks-jacob" aria-expanded="false" aria-controls="toptracks-jacob">
+                                        data-target="#toptracks-jacob" aria-expanded="false"
+                                        aria-controls="toptracks-jacob">
                                         TOP TRACKS ARTISTA
                                     </button>
                                 </h5>
@@ -572,13 +589,1132 @@
                                             <div id="track-jacob_9">9</div>
                                         </div>
                                     </div>
-    
+
                                 </div>
                             </div>
                         </div>
                     </div>
-    
-    
+
+
+                </div>
+                <div class="modal-footer">
+                    FOOTER
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MODAL PUKA-->
+    <div class="modal fade" id="modal-puka" tabindex="-1" role="dialog" aria-labelledby="titulo-puka"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div id="foto-modal-puka"></div>
+                    <h5 class="modal-title" id="titulo-puka"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="accordion-puka">
+                        <div class="card">
+                            <div class="card-header" id="head-bio-puka">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#bio-puka"
+                                        aria-expanded="true" aria-controls="bio-puka">
+                                        BIOGRAFIA ARTISTA
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="bio-puka" class="collapse show" aria-labelledby="head-bio-puka"
+                                data-parent="#accordion-puka">
+                                <div class="card-body">
+                                    ***BIO***
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="head-toptracks-puka">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#toptracks-puka" aria-expanded="false"
+                                        aria-controls="toptracks-puka">
+                                        TOP TRACKS ARTISTA
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="toptracks-puka" class="collapse" aria-labelledby="head-toptracks-puka"
+                                data-parent="#accordion-puka">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="capa-album"></div>
+                                            <div id="track-puka_0">0</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-puka_1">1</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-puka_2">2</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-puka_3">3</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-puka_4">4</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-puka_5">5</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-puka_6">6</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-puka_7">7</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-puka_8">8</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-puka_9">9</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    FOOTER
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MODAL voltech-->
+    <div class="modal fade" id="modal-volt" tabindex="-1" role="dialog" aria-labelledby="titulo-voltech"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div id="foto-modal-voltech"></div>
+                    <h5 class="modal-title" id="titulo-voltech"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="accordion-voltech">
+                        <div class="card">
+                            <div class="card-header" id="head-bio-voltech">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#bio-voltech"
+                                        aria-expanded="true" aria-controls="bio-voltech">
+                                        BIOGRAFIA ARTISTA
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="bio-voltech" class="collapse show" aria-labelledby="head-bio-voltech"
+                                data-parent="#accordion-voltech">
+                                <div class="card-body">
+                                    Natural de Campo Belo/MG, Voltech conta com lançamentos em selos como: SOAVE, SÓ TRACK BOA, Up Club, entre outras. Voltech é um DJ / Produtor Brasileiro que com apenas 24 anos completou a marca de +11 milhões de execuções no Spotify, com suportes de Alok, Kungs, Dubdogz, Bhaskar, Kvsh, Voltech vem conquistando grande espaço no cenário da música eletrônica com suas músicas e carisma.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="head-toptracks-voltech">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#toptracks-voltech" aria-expanded="false"
+                                        aria-controls="toptracks-voltech">
+                                        TOP TRACKS ARTISTA
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="toptracks-voltech" class="collapse" aria-labelledby="head-toptracks-voltech"
+                                data-parent="#accordion-voltech">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="capa-album"></div>
+                                            <div id="track-voltech_0">0</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-voltech_1">1</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-voltech_2">2</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-voltech_3">3</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-voltech_4">4</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-voltech_5">5</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-voltech_6">6</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-voltech_7">7</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-voltech_8">8</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-voltech_9">9</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    FOOTER
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MODAL gaba-->
+    <div class="modal fade" id="modal-gaba" tabindex="-1" role="dialog" aria-labelledby="titulo-gaba"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div id="foto-modal-gaba"></div>
+                    <h5 class="modal-title" id="titulo-gaba"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="accordion-gaba">
+                        <div class="card">
+                            <div class="card-header" id="head-bio-gaba">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#bio-gaba"
+                                        aria-expanded="true" aria-controls="bio-gaba">
+                                        BIOGRAFIA ARTISTA
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="bio-gaba" class="collapse show" aria-labelledby="head-bio-gaba"
+                                data-parent="#accordion-gaba">
+                                <div class="card-body">
+                                    Expoente e multifacetado, Gabriel Kamers viu na música eletrônica o seu futuro e acertou, mas não por sorte. Ao mudar-se para Londres em 2003, seu dom para a condução de pistas ficou evidente e seu primeiro passo como DJ se deu em meio aos sons psicodélicos. A profissionalização foi natural e, em 2008, cursou produção musical no respeitado SAE Institute. O amor pela música eletrônica transcendeu, resultando em um novo projeto: Gaba Kamer. Desde 2016 o nascido em Laguna e criado em Florianópolis, Santa Catarina explora as vertentes do tech house, house, bass house, com leves pitadas progressivas transitando harmoniosamente. Não à toa, o expoente produtor carrega o mérito de colaborações com alguns dos maiores nomes nacionais: Bhaskar, DJ Glen, Fractall e Fabricio Peçanha. Também recebeu o suporte de Alok e Vintage Culture e conquistou lançamentos em gravadoras expressivas mundialmente: Dirtybird de Claude VonStroke, Kontor Records, Austro Music (Som Livre), Endless (Sony) e UP Club Records. Intensamente influenciado pelo hip hop e house em seus vocais, Gaba se mantém fiel às melodias em suas composições, além de utilizar efeitos retrôs e synths. Seu remix para You & Me de Alok, que lhe rendeu mais de um milhão de plays no Spotify. Sua turnê pela África do Sul e suas passagens por alguns dos maiores clubs e festivais do mundo como Green Valley, Magic Island, P12 e o consagrado Universo Paralello também o colocam em posição de destaque demonstrando o potencial do artista.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="head-toptracks-gaba">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#toptracks-gaba" aria-expanded="false"
+                                        aria-controls="toptracks-gaba">
+                                        TOP TRACKS ARTISTA
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="toptracks-gaba" class="collapse" aria-labelledby="head-toptracks-gaba"
+                                data-parent="#accordion-gaba">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="capa-album"></div>
+                                            <div id="track-gaba_0">0</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-gaba_1">1</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-gaba_2">2</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-gaba_3">3</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-gaba_4">4</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-gaba_5">5</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-gaba_6">6</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-gaba_7">7</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-gaba_8">8</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-gaba_9">9</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    FOOTER
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MODAL hippo-->
+    <div class="modal fade" id="modal-hippo" tabindex="-1" role="dialog" aria-labelledby="titulo-hippo"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div id="foto-modal-hippo"></div>
+                    <h5 class="modal-title" id="titulo-hippo"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="accordion-hippo">
+                        <div class="card">
+                            <div class="card-header" id="head-bio-hippo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#bio-hippo"
+                                        aria-expanded="true" aria-controls="bio-hippo">
+                                        BIOGRAFIA ARTISTA
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="bio-hippo" class="collapse show" aria-labelledby="head-bio-hippo"
+                                data-parent="#accordion-hippo">
+                                <div class="card-body">
+                                    Duo from south Brazil passionate by the groove, always looking for freshness music to gather people with our rhythm and originality.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="head-toptracks-hippo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#toptracks-hippo" aria-expanded="false"
+                                        aria-controls="toptracks-hippo">
+                                        TOP TRACKS ARTISTA
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="toptracks-hippo" class="collapse" aria-labelledby="head-toptracks-hippo"
+                                data-parent="#accordion-hippo">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="capa-album"></div>
+                                            <div id="track-hippo_0">0</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-hippo_1">1</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-hippo_2">2</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-hippo_3">3</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-hippo_4">4</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-hippo_5">5</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-hippo_6">6</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-hippo_7">7</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-hippo_8">8</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-hippo_9">9</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    FOOTER
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MODAL cosmo-->
+    <div class="modal fade" id="modal-cosmo" tabindex="-1" role="dialog" aria-labelledby="titulo-cosmo"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div id="foto-modal-cosmo"></div>
+                    <h5 class="modal-title" id="titulo-cosmo"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="accordion-cosmo">
+                        <div class="card">
+                            <div class="card-header" id="head-bio-cosmo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#bio-cosmo"
+                                        aria-expanded="true" aria-controls="bio-cosmo">
+                                        BIOGRAFIA ARTISTA
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="bio-cosmo" class="collapse show" aria-labelledby="head-bio-cosmo"
+                                data-parent="#accordion-cosmo">
+                                <div class="card-body">
+                                    It's not a surprise that Leonardo Puharic, the brilliant mind behind Cosmonet, is referred as one of the greatest brazilian psytrance producers of all times .
+
+                                    Charismatic and very well known for his explosive performances, "Cosmonet" is the only official XXXPerience Festival's resident over a decade. Nothing less than the biggest brazilian electronic music festival.
+                                    
+                                    He’s also the only psytrance brazilian who has reached the #1 top sells cds in Japan and after that, was invited to performe at the Ageha - Tokyo. The best nightclub in the country, over 5000 people indoor.
+                                    
+                                    Many international tours including: Israel, Japan, Germany, Sweden, Swiss, France, Holland, Mexico and Argentina. More than 100 releases, including 3 albums, many singles and ep's on the majors psytrance labels worldwide.
+                                    
+                                    The quality of his music is also guaranteed. Leonardo, is an "Audio Mastering PRO" by the best audio institute in the planet. The very well known SAE INSTITUTE OXFORD
+                                    
+                                    High skills, a lot of experience and continuous updating, are the main reasons he's rocking the dancefloors over a decade.
+                                    
+                                    As he says... "The main interest is to bring happiness to the people who listen to my music”.
+                                    
+                                    welcome to the Cosmoworld !
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="head-toptracks-cosmo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#toptracks-cosmo" aria-expanded="false"
+                                        aria-controls="toptracks-cosmo">
+                                        TOP TRACKS ARTISTA
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="toptracks-cosmo" class="collapse" aria-labelledby="head-toptracks-cosmo"
+                                data-parent="#accordion-cosmo">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="capa-album"></div>
+                                            <div id="track-cosmo_0">0</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-cosmo_1">1</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-cosmo_2">2</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-cosmo_3">3</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-cosmo_4">4</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-cosmo_5">5</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-cosmo_6">6</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-cosmo_7">7</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-cosmo_8">8</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-cosmo_9">9</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    FOOTER
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MODAL elemental-->
+    <div class="modal fade" id="modal-elemental" tabindex="-1" role="dialog" aria-labelledby="titulo-elemental"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div id="foto-modal-elemental"></div>
+                    <h5 class="modal-title" id="titulo-elemental"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="accordion-elemental">
+                        <div class="card">
+                            <div class="card-header" id="head-bio-elemental">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#bio-elemental"
+                                        aria-expanded="true" aria-controls="bio-elemental">
+                                        BIOGRAFIA ARTISTA
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="bio-elemental" class="collapse show" aria-labelledby="head-bio-elemental"
+                                data-parent="#accordion-elemental">
+                                <div class="card-body">
+                                    Progressive trance psicodélico com guitarra ao vivo e influências claras de uma história regada a rock e metal caracterizam o projeto Elemental, que foi criado por Luiz Luz em meados de 2008. O fullon morning foi o início de tudo, mas em 2010 se converteu ao progressive, dando sequência nas produções de fullon em seu projeto paralelo The Criminals, em parceria com o também renomado produtor Thales Dumbra. Já se apresentou em todas as regiões brasileiras, fez sua primeira tour internacional em outubro de 2015 e vem conquistando seu espaço na cena eletrônica mundial e assinando lançamentos de sucesso em grandes gravadoras como Alien Records e Mada Beats.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="head-toptracks-elemental">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#toptracks-elemental" aria-expanded="false"
+                                        aria-controls="toptracks-elemental">
+                                        TOP TRACKS ARTISTA
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="toptracks-elemental" class="collapse" aria-labelledby="head-toptracks-elemental"
+                                data-parent="#accordion-elemental">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="capa-album"></div>
+                                            <div id="track-elemental_0">0</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-elemental_1">1</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-elemental_2">2</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-elemental_3">3</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-elemental_4">4</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-elemental_5">5</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-elemental_6">6</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-elemental_7">7</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-elemental_8">8</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-elemental_9">9</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    FOOTER
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MODAL plastic-->
+    <div class="modal fade" id="modal-plastic" tabindex="-1" role="dialog" aria-labelledby="titulo-plastic"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div id="foto-modal-plastic"></div>
+                    <h5 class="modal-title" id="titulo-plastic"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="accordion-plastic">
+                        <div class="card">
+                            <div class="card-header" id="head-bio-plastic">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#bio-plastic"
+                                        aria-expanded="true" aria-controls="bio-plastic">
+                                        BIOGRAFIA ARTISTA
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="bio-plastic" class="collapse show" aria-labelledby="head-bio-plastic"
+                                data-parent="#accordion-plastic">
+                                <div class="card-body">
+                                    ***BIO***
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="head-toptracks-plastic">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#toptracks-plastic" aria-expanded="false"
+                                        aria-controls="toptracks-plastic">
+                                        TOP TRACKS ARTISTA
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="toptracks-plastic" class="collapse" aria-labelledby="head-toptracks-plastic"
+                                data-parent="#accordion-plastic">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="capa-album"></div>
+                                            <div id="track-plastic_0">0</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-plastic_1">1</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-plastic_2">2</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-plastic_3">3</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-plastic_4">4</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-plastic_5">5</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-plastic_6">6</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-plastic_7">7</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-plastic_8">8</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-plastic_9">9</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    FOOTER
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MODAL vermont-->
+    <div class="modal fade" id="modal-vermont" tabindex="-1" role="dialog" aria-labelledby="titulo-vermont"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div id="foto-modal-vermont"></div>
+                    <h5 class="modal-title" id="titulo-vermont"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="accordion-vermont">
+                        <div class="card">
+                            <div class="card-header" id="head-bio-vermont">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#bio-vermont"
+                                        aria-expanded="true" aria-controls="bio-vermont">
+                                        BIOGRAFIA ARTISTA
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="bio-vermont" class="collapse show" aria-labelledby="head-bio-vermont"
+                                data-parent="#accordion-vermont">
+                                <div class="card-body">
+                                    Consolidado no cenário músical, Rafael Ferrari é o nome por trás do projeto “Vermont”. Com seu estilo criativo e singular, é hoje um dos nomes mais fortes do país. Considerado um “hitmaker”, ao longo de sua carreira produziu grandes sucessos como “The Engineers”, “Survey Selva”, “Witch Hunter” e “Kazahi”, Atualmente em expansão internacional, o artista vem rodando o mundo e já se apresentou em diversos países, entre eles, França, Suíça, Itália, México e Espanha. Escute o recém-lançado álbum "Stars"
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="head-toptracks-vermont">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#toptracks-vermont" aria-expanded="false"
+                                        aria-controls="toptracks-vermont">
+                                        TOP TRACKS ARTISTA
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="toptracks-vermont" class="collapse" aria-labelledby="head-toptracks-vermont"
+                                data-parent="#accordion-vermont">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="capa-album"></div>
+                                            <div id="track-vermont_0">0</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-vermont_1">1</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-vermont_2">2</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-vermont_3">3</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-vermont_4">4</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-vermont_5">5</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-vermont_6">6</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-vermont_7">7</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-vermont_8">8</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-vermont_9">9</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    FOOTER
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MODAL renan-->
+    <div class="modal fade" id="modal-renan" tabindex="-1" role="dialog" aria-labelledby="titulo-renan"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div id="foto-modal-renan"></div>
+                    <h5 class="modal-title" id="titulo-renan"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="accordion-renan">
+                        <div class="card">
+                            <div class="card-header" id="head-bio-renan">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#bio-renan"
+                                        aria-expanded="true" aria-controls="bio-renan">
+                                        BIOGRAFIA ARTISTA
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="bio-renan" class="collapse show" aria-labelledby="head-bio-renan"
+                                data-parent="#accordion-renan">
+                                <div class="card-body">
+                                    ***BIO***
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="head-toptracks-renan">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#toptracks-renan" aria-expanded="false"
+                                        aria-controls="toptracks-renan">
+                                        TOP TRACKS ARTISTA
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="toptracks-renan" class="collapse" aria-labelledby="head-toptracks-renan"
+                                data-parent="#accordion-renan">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="capa-album"></div>
+                                            <div id="track-renan_0">0</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-renan_1">1</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-renan_2">2</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-renan_3">3</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-renan_4">4</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-renan_5">5</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-renan_6">6</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-renan_7">7</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-renan_8">8</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-renan_9">9</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    FOOTER
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MODAL sofat-->
+    <div class="modal fade" id="modal-sofat" tabindex="-1" role="dialog" aria-labelledby="titulo-sofat"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div id="foto-modal-sofat"></div>
+                    <h5 class="modal-title" id="titulo-sofat"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="accordion-sofat">
+                        <div class="card">
+                            <div class="card-header" id="head-bio-sofat">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#bio-sofat"
+                                        aria-expanded="true" aria-controls="bio-sofat">
+                                        BIOGRAFIA ARTISTA
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="bio-sofat" class="collapse show" aria-labelledby="head-bio-sofat"
+                                data-parent="#accordion-sofat">
+                                <div class="card-body">
+                                    ***BIO***
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="head-toptracks-sofat">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#toptracks-sofat" aria-expanded="false"
+                                        aria-controls="toptracks-sofat">
+                                        TOP TRACKS ARTISTA
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="toptracks-sofat" class="collapse" aria-labelledby="head-toptracks-sofat"
+                                data-parent="#accordion-sofat">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="capa-album"></div>
+                                            <div id="track-sofat_0">0</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-sofat_1">1</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-sofat_2">2</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-sofat_3">3</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-sofat_4">4</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-sofat_5">5</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-sofat_6">6</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-sofat_7">7</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-sofat_8">8</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-sofat_9">9</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    FOOTER
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MODAL flexb-->
+    <div class="modal fade" id="modal-flexb" tabindex="-1" role="dialog" aria-labelledby="titulo-flexb"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div id="foto-modal-flexb"></div>
+                    <h5 class="modal-title" id="titulo-flexb"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="accordion-flexb">
+                        <div class="card">
+                            <div class="card-header" id="head-bio-flexb">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#bio-flexb"
+                                        aria-expanded="true" aria-controls="bio-flexb">
+                                        BIOGRAFIA ARTISTA
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="bio-flexb" class="collapse show" aria-labelledby="head-bio-flexb"
+                                data-parent="#accordion-flexb">
+                                <div class="card-body">
+                                    De “Baby I’m Boss” pela CUFF até a mais recente “Tonight” pela Austro Music, da Som Livre, Ronaldo Galdino a.k.a. FlexB sabe muito bem como produzir músicas que fazem a pista de dança explodir. E essa autenticidade presente nas suas faixas se traduz na sua presença de palco, vigoroso e extrovertido, ele se conecta com o público do início ao fim do set demonstrando uma seleção musical precisa, ousada e apimentada com o tempero brasileiro que deixa tudo mais interessante.
+
+                                    Muito desse know-how foi adquirido durante seus 10 anos de carreira marcando presença em diferentes clubs e festivais, da XXXPerience ao Universo Paralello, da Soulvision ao Green Valley, além de experiências frente a outras culturas como gigs pelo México, África do Sul e Moçambique. Pouco a pouco, FlexB vai conquistando novos territórios, levando seu talento para lugares que jamais imaginava com performances que são, no mínimo, inesquecíveis.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="head-toptracks-flexb">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#toptracks-flexb" aria-expanded="false"
+                                        aria-controls="toptracks-flexb">
+                                        TOP TRACKS ARTISTA
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="toptracks-flexb" class="collapse" aria-labelledby="head-toptracks-flexb"
+                                data-parent="#accordion-flexb">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="capa-album"></div>
+                                            <div id="track-flexb_0">0</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-flexb_1">1</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-flexb_2">2</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-flexb_3">3</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-flexb_4">4</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-flexb_5">5</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-flexb_6">6</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-flexb_7">7</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-flexb_8">8</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-flexb_9">9</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    FOOTER
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MODAL thales-->
+    <div class="modal fade" id="modal-thales" tabindex="-1" role="dialog" aria-labelledby="titulo-thales"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div id="foto-modal-thales"></div>
+                    <h5 class="modal-title" id="titulo-thales"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="accordion-thales">
+                        <div class="card">
+                            <div class="card-header" id="head-bio-thales">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#bio-thales"
+                                        aria-expanded="true" aria-controls="bio-thales">
+                                        BIOGRAFIA ARTISTA
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="bio-thales" class="collapse show" aria-labelledby="head-bio-thales"
+                                data-parent="#accordion-thales">
+                                <div class="card-body">
+                                    ***BIO***
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="head-toptracks-thales">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#toptracks-thales" aria-expanded="false"
+                                        aria-controls="toptracks-thales">
+                                        TOP TRACKS ARTISTA
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="toptracks-thales" class="collapse" aria-labelledby="head-toptracks-thales"
+                                data-parent="#accordion-thales">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="capa-album"></div>
+                                            <div id="track-thales_0">0</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-thales_1">1</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-thales_2">2</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-thales_3">3</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-thales_4">4</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-thales_5">5</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-thales_6">6</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-thales_7">7</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-thales_8">8</div>
+                                        </div>
+                                        <div class="col-md-6 ml-auto">
+                                            <div id="track-thales_9">9</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
                 <div class="modal-footer">
                     FOOTER
