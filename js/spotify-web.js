@@ -2,6 +2,9 @@ const clientId = 'aeccdd0daa854e18ba0d5be3db207b4d';
 const clientSecret = '5d39f1fd07ab4f0db51b39e319f82ae4';
 var tokenn
 
+
+
+
 const pegaToken = {
 	"url": "https://accounts.spotify.com/api/token",
     async:'false',
@@ -22,6 +25,15 @@ $.ajax(pegaToken).done(function(response){
 })
 
 console.log(pegaToken, tokenn);
+
+//chamando o wrapper
+var spotifyApi = new SpotifyWebApi();
+spotifyApi.setAccessToken('tokenn');
+
+spotifyApi.getArtistAlbums('43ZHCT0cAZBISjO8DG9PnE', function (err, data) {
+    if (err) console.error(err);
+    else console.log('Artist albums', data);
+  });
 
 $.ajax({
     type: "GET",
