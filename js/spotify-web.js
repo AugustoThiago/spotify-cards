@@ -15,8 +15,6 @@ const pegaToken = {
 	},
 };
 
-
-
 $.ajax(pegaToken).done(function(response){    
     console.log('RESPONSE: ', response.access_token);
     tokenn = response.access_token; 
@@ -36,6 +34,8 @@ $.ajax({
         console.log("chegou bem", tokenn);
     }
 });
+
+
 // $.ajax({
 //     type: "POST",
 //     url: 'https://accounts.spotify.com/api/token',
@@ -234,7 +234,7 @@ $.ajax({
     type: "GET",
     url: 'https://api.spotify.com/v1/artists/6MXMuAa4reykXVUPFaSE2q/top-tracks?market=BR',
     headers: {
-        'Authorization': 'Bearer ' + 'BQBsJIHoI56PU9QQ-WQstng5OLunje7pGcmSALP_nsUJCAB4cyHWngu3qZy53V5Icc4BE7-oJeWW70NYIYG8NnVeEffl0eMsGtdLlPStCQbXz2qhbvI9zpzpvUmQyP0fSbA4k2XjHoROWvtZviNFOUu696Kc1w'
+        'Authorization': 'Bearer ' + 'BQClsc3ZEDHKbCjuyFuB4aGYdQAm2kkADMdSqi3wgvndKfMecYvf8XEyjAhEgHp3mKRn0hU89bxKm7QumLcPeCy4RKjHmnFjOebrUaNzj2rMB2rU-t6z90WUHdhexsPD4XT8dNhNUtLUytU75lwRzneLkfFH8w'
     },
     success: function (data) {
         for (i in data.tracks) {
