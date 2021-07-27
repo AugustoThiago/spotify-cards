@@ -1,9 +1,10 @@
-
 const clientId = 'aeccdd0daa854e18ba0d5be3db207b4d';
 const clientSecret = '5d39f1fd07ab4f0db51b39e319f82ae4';
+var tokenn
 
 const pegaToken = {
 	"url": "https://accounts.spotify.com/api/token",
+    async:'false',
 	"method": "POST",
 	"headers": {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -12,35 +13,45 @@ const pegaToken = {
 	"data": {
 		"grant_type": "client_credentials"
 	},
-    success: function (token) {
-        console.log('veio',token.access_token);
-        return token.access_token;
-    }
 };
 
 
-$.ajax(pegaToken).done(function(response){
-    console.log(response.access_token);
-    token = response.access_token; 
-    return response.access_token;    
+
+$.ajax(pegaToken).done(function(response){    
+    console.log('RESPONSE: ', response.access_token);
+    tokenn = response.access_token; 
+    return tokenn  
 })
 
+console.log(pegaToken, tokenn);
+
 $.ajax({
-    type: "POST",
-    url: 'https://accounts.spotify.com/api/token',
+    type: "GET",
+    url: 'https://api.spotify.com/v1/artists?ids=6MXMuAa4reykXVUPFaSE2q%2C3yujwOo5L5DZDOcGj8K9fj%2C1VD9v9T9bOrZXhfZ8ZAHK9%2C5IRGhffWFbNGJqS7wc7UDN%2C3Gmuv8ih6UWYlZQlM4zFgo%2C66DRc0RcwzeQcm1wKdDQ4o%2C4ESBMlhP8DUP0k5mIJ2xfJ%2C6QmiUgayhWQeUFTRtBzMT8%2C29fIOE8ckNq96NbZlktZ7a%2C5rOuAFH0SjUPYfw8czrNaP%2C7qd3q5BKu3lh5r0vVBWSzm%2C7aS93G9e7XG0GCUATQjqv0%2C3anHEyEBxuE2hsDhHVlzZi%2C01Vnbpcaztlxks2JFHYkME%2C1BkGeGrbRHYd8Wg2lQqJqR%2C4xMfBjNDW6VPe7W4Wly5W7',
+    async:'false',
     headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'Authorization': 'Basic ' + btoa(clientId + ':' + clientSecret)
+        'Authorization': 'Bearer ' + 'BQAxGCNO4OkTWD2Y2_21hS4JobxvQkqnS_YlVcIXPpRavuQSsFhbd0HxRuCc4aOnclAzjhGOG5M5tcdOSGGsddEOjT6nWzd2fXiR99PQCsc5Rjo_3-0hBUk8Lpiej37aYVc4ExC798y8y91fj9bZ5JpyJnLl4Q'
     },
-    data: {
-        "grant_type": "client_credentials"
-    },
-    success: function (token) {
-        console.log('Token 01:', token.access_token);
-        token = token.access_token;
-        return token
-    },
+    success: function (data) {
+        console.log("chegou bem", tokenn);
+    }
 });
+// $.ajax({
+//     type: "POST",
+//     url: 'https://accounts.spotify.com/api/token',
+//     headers: {
+//         'Content-Type': 'application/x-www-form-urlencoded',
+//         'Authorization': 'Basic ' + btoa(clientId + ':' + clientSecret)
+//     },
+//     data: {
+//         "grant_type": "client_credentials"
+//     },
+//     success: function (token) {
+//         console.log('Token 01:', token.access_token);
+//         token = token.access_token;
+//         return token
+//     },
+// });
 
 
 $.ajax({
@@ -48,7 +59,7 @@ $.ajax({
     url: 'https://api.spotify.com/v1/artists?ids=6MXMuAa4reykXVUPFaSE2q%2C3yujwOo5L5DZDOcGj8K9fj%2C1VD9v9T9bOrZXhfZ8ZAHK9%2C5IRGhffWFbNGJqS7wc7UDN%2C3Gmuv8ih6UWYlZQlM4zFgo%2C66DRc0RcwzeQcm1wKdDQ4o%2C4ESBMlhP8DUP0k5mIJ2xfJ%2C6QmiUgayhWQeUFTRtBzMT8%2C29fIOE8ckNq96NbZlktZ7a%2C5rOuAFH0SjUPYfw8czrNaP%2C7qd3q5BKu3lh5r0vVBWSzm%2C7aS93G9e7XG0GCUATQjqv0%2C3anHEyEBxuE2hsDhHVlzZi%2C01Vnbpcaztlxks2JFHYkME%2C1BkGeGrbRHYd8Wg2lQqJqR%2C4xMfBjNDW6VPe7W4Wly5W7',
 
     headers: {
-        'Authorization': 'Bearer ' + 'BQAm0l1GbXAU6-ME1LXsz0B4nF4lT94rvkmjBkImD0rq1pGMTU4zGkZtYWr5L8INBNDBU4_IzM63xxbvHQ7v4ZnkPgycJGiI1idMtG8QCk7Y4RMXmk2oH610LC6HJEII9410UVBps73qj61EEDAFJfi2gQko-g'
+        'Authorization': 'Bearer ' + 'BQAs3lFrhaBUW3_ZT1Ipy-iizqnO4Ux82FXepI7vwVlWDM1sQqGDwQlXZfGkdtSvVpce-K2UIfPRcmlwdWVI6ercLyw4UC6d0PbeoUX289WOc-fyXF9JuUfejtCcjeB9c7aHL9dobRfz_WAHnlTutdem04R_5A'
     },
     success: function (data) {
         // console.log('Todos', data);
