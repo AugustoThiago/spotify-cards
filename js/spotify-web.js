@@ -2,9 +2,6 @@ const clientId = 'aeccdd0daa854e18ba0d5be3db207b4d';
 const clientSecret = '5d39f1fd07ab4f0db51b39e319f82ae4';
 var tokenn
 
-
-
-
 const pegaToken = {
 	"url": "https://accounts.spotify.com/api/token",
     async:'false',
@@ -22,7 +19,7 @@ $.ajax(pegaToken).done(function(response){
     console.log('RESPONSE: ', response.access_token);
     tokenn = response.access_token; 
     return tokenn  
-})
+})  
 
 console.log(pegaToken, tokenn);
 
@@ -35,12 +32,12 @@ spotifyApi.getArtistAlbums('43ZHCT0cAZBISjO8DG9PnE', function (err, data) {
     else console.log('Artist albums', data);
   });
 
-$.ajax({
+$.ajax()({
     type: "GET",
     url: 'https://api.spotify.com/v1/artists?ids=6MXMuAa4reykXVUPFaSE2q%2C3yujwOo5L5DZDOcGj8K9fj%2C1VD9v9T9bOrZXhfZ8ZAHK9%2C5IRGhffWFbNGJqS7wc7UDN%2C3Gmuv8ih6UWYlZQlM4zFgo%2C66DRc0RcwzeQcm1wKdDQ4o%2C4ESBMlhP8DUP0k5mIJ2xfJ%2C6QmiUgayhWQeUFTRtBzMT8%2C29fIOE8ckNq96NbZlktZ7a%2C5rOuAFH0SjUPYfw8czrNaP%2C7qd3q5BKu3lh5r0vVBWSzm%2C7aS93G9e7XG0GCUATQjqv0%2C3anHEyEBxuE2hsDhHVlzZi%2C01Vnbpcaztlxks2JFHYkME%2C1BkGeGrbRHYd8Wg2lQqJqR%2C4xMfBjNDW6VPe7W4Wly5W7',
     async:'false',
     headers: {
-        'Authorization': 'Bearer ' + 'BQAxGCNO4OkTWD2Y2_21hS4JobxvQkqnS_YlVcIXPpRavuQSsFhbd0HxRuCc4aOnclAzjhGOG5M5tcdOSGGsddEOjT6nWzd2fXiR99PQCsc5Rjo_3-0hBUk8Lpiej37aYVc4ExC798y8y91fj9bZ5JpyJnLl4Q'
+        'Authorization': 'Bearer ' + 'tokenn'
     },
     success: function (data) {
         console.log("chegou bem", tokenn);
@@ -75,7 +72,7 @@ $.ajax({
     },
     success: function (data) {
         // console.log('Todos', data);
-        var spotifyIcon = '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M19.1,10.64C15.23,8.34,8.85,8.13,5.16,9.25A1.12,1.12,0,1,1,4.51,7.1c4.23-1.28,11.28-1,15.73,1.61a1.12,1.12,0,1,1-1.14,1.93ZM19,14a.94.94,0,0,1-1.29.31A15.73,15.73,0,0,0,5.73,13a.94.94,0,0,1-.55-1.79,17.5,17.5,0,0,1,13.48,1.6A.93.93,0,0,1,19,14ZM17.5,17.31a.75.75,0,0,1-1,.25c-2.82-1.72-6.37-2.11-10.55-1.16A.74.74,0,0,1,5,15.84a.75.75,0,0,1,.56-.9c4.57-1,8.49-.59,11.66,1.34A.75.75,0,0,1,17.5,17.31ZM12,0A12,12,0,1,0,24,12,12,12,0,0,0,12,0Z" style="fill:#fff"/></svg>&nbsp'
+        var spotifyIcon = '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M19.1,10.64C15.23,8.34,8.85,8.13,5.16,9.25A1.12,1.12,0,1,1,4.51,7.1c4.23-1.28,11.28-1,15.73,1.61a1.12,1.12,0,1,1-1.14,1.93ZM19,14a.94.94,0,0,1-1.29.31A15.73,15.73,0,0,0,5.73,13a.94.94,0,0,1-.55-1.79,17.5,17.5,0,0,1,13.48,1.6A.93.93,0,0,1,19,14ZM17.5,17.31a.75.75,0,0,1-1,.25c-2.82-1.72-6.37-2.11-10.55-1.16A.74.74,0,0,1,5,15.84a.75.75,0,0,1,.56-.9c4.57-1,8.49-.59,11.66,1.34A.75.75,0,0,1,17.5,17.31ZM12,0A12,12,0,1,0,24,12,12,12,0,0,0,12,0Z" style="fill:#fff"/></svg>&nbsp'    
 
         var tabelaGaz = document.getElementById("nome-gazolla");
         var fotoGaz = document.getElementById("foto-gazolla");
