@@ -19,56 +19,23 @@ $.ajax(pegaToken).done(function(response){
     console.log('RESPONSE: ', response.access_token);
     tokenn = response.access_token; 
     return tokenn  
-})  
-
-console.log(pegaToken, tokenn);
+})          
 
 //chamando o wrapper
-var spotifyApi = new SpotifyWebApi();
-spotifyApi.setAccessToken('tokenn');
+// var spotifyApi = new SpotifyWebApi();
+// spotifyApi.setAccessToken('tokenn');
 
-spotifyApi.getArtistAlbums('43ZHCT0cAZBISjO8DG9PnE', function (err, data) {
-    if (err) console.error(err);
-    else console.log('Artist albums', data);
-  });
-
-$.ajax()({
-    type: "GET",
-    url: 'https://api.spotify.com/v1/artists?ids=6MXMuAa4reykXVUPFaSE2q%2C3yujwOo5L5DZDOcGj8K9fj%2C1VD9v9T9bOrZXhfZ8ZAHK9%2C5IRGhffWFbNGJqS7wc7UDN%2C3Gmuv8ih6UWYlZQlM4zFgo%2C66DRc0RcwzeQcm1wKdDQ4o%2C4ESBMlhP8DUP0k5mIJ2xfJ%2C6QmiUgayhWQeUFTRtBzMT8%2C29fIOE8ckNq96NbZlktZ7a%2C5rOuAFH0SjUPYfw8czrNaP%2C7qd3q5BKu3lh5r0vVBWSzm%2C7aS93G9e7XG0GCUATQjqv0%2C3anHEyEBxuE2hsDhHVlzZi%2C01Vnbpcaztlxks2JFHYkME%2C1BkGeGrbRHYd8Wg2lQqJqR%2C4xMfBjNDW6VPe7W4Wly5W7',
-    async:'false',
-    headers: {
-        'Authorization': 'Bearer ' + 'tokenn'
-    },
-    success: function (data) {
-        console.log("chegou bem", tokenn);
-    }
-});
-
-
-// $.ajax({
-//     type: "POST",
-//     url: 'https://accounts.spotify.com/api/token',
-//     headers: {
-//         'Content-Type': 'application/x-www-form-urlencoded',
-//         'Authorization': 'Basic ' + btoa(clientId + ':' + clientSecret)
-//     },
-//     data: {
-//         "grant_type": "client_credentials"
-//     },
-//     success: function (token) {
-//         console.log('Token 01:', token.access_token);
-//         token = token.access_token;
-//         return token
-//     },
-// });
-
+// spotifyApi.getArtistAlbums('43ZHCT0cAZBISjO8DG9PnE', function (err, data) {
+//     if (err) console.error(err);
+//     else console.log('Artist albums', data);
+//   });
 
 $.ajax({
     type: "GET",
     url: 'https://api.spotify.com/v1/artists?ids=6MXMuAa4reykXVUPFaSE2q%2C3yujwOo5L5DZDOcGj8K9fj%2C1VD9v9T9bOrZXhfZ8ZAHK9%2C5IRGhffWFbNGJqS7wc7UDN%2C3Gmuv8ih6UWYlZQlM4zFgo%2C66DRc0RcwzeQcm1wKdDQ4o%2C4ESBMlhP8DUP0k5mIJ2xfJ%2C6QmiUgayhWQeUFTRtBzMT8%2C29fIOE8ckNq96NbZlktZ7a%2C5rOuAFH0SjUPYfw8czrNaP%2C7qd3q5BKu3lh5r0vVBWSzm%2C7aS93G9e7XG0GCUATQjqv0%2C3anHEyEBxuE2hsDhHVlzZi%2C01Vnbpcaztlxks2JFHYkME%2C1BkGeGrbRHYd8Wg2lQqJqR%2C4xMfBjNDW6VPe7W4Wly5W7',
 
     headers: {
-        'Authorization': 'Bearer ' + 'BQAs3lFrhaBUW3_ZT1Ipy-iizqnO4Ux82FXepI7vwVlWDM1sQqGDwQlXZfGkdtSvVpce-K2UIfPRcmlwdWVI6ercLyw4UC6d0PbeoUX289WOc-fyXF9JuUfejtCcjeB9c7aHL9dobRfz_WAHnlTutdem04R_5A'
+        'Authorization': 'Bearer ' + 'BQB4A-v1ODyLJt_rWKEeGitZ-2n0IV8bHaBZV7W5NZJOibDItcnVIugVNFI53BxvJH03TNcXZFZh_NqN53QvRTJLOekzpiAurWWecXEDJRratN6BAyZdNT1qeD9BbuJXU-snfGHD1yS1cULJincd7rPo-meHOg',
     },
     success: function (data) {
         // console.log('Todos', data);
