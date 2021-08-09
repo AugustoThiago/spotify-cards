@@ -1,46 +1,79 @@
-const clientId = 'aeccdd0daa854e18ba0d5be3db207b4d';
-const clientSecret = '5d39f1fd07ab4f0db51b39e319f82ae4';
-var tokenn
+const clientId = '';
+const clientSecret = '';
+var token
+var spotifyIcon = '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M19.1,10.64C15.23,8.34,8.85,8.13,5.16,9.25A1.12,1.12,0,1,1,4.51,7.1c4.23-1.28,11.28-1,15.73,1.61a1.12,1.12,0,1,1-1.14,1.93ZM19,14a.94.94,0,0,1-1.29.31A15.73,15.73,0,0,0,5.73,13a.94.94,0,0,1-.55-1.79,17.5,17.5,0,0,1,13.48,1.6A.93.93,0,0,1,19,14ZM17.5,17.31a.75.75,0,0,1-1,.25c-2.82-1.72-6.37-2.11-10.55-1.16A.74.74,0,0,1,5,15.84a.75.75,0,0,1,.56-.9c4.57-1,8.49-.59,11.66,1.34A.75.75,0,0,1,17.5,17.31ZM12,0A12,12,0,1,0,24,12,12,12,0,0,0,12,0Z" style="fill:#fff"/></svg>&nbsp'
 
-const pegaToken = {
-	"url": "https://accounts.spotify.com/api/token",
-    async:'false',
-	"method": "POST",
-	"headers": {
+
+const pegaToken2 = async () => {
+    const response = await fetch('https://accounts.spotify.com/api/token', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization': 'Basic ' + btoa(clientId + ':' + clientSecret)
+        },
+        body: {
+            'grant_type': 'client_credentials'
+        },
+    });
+    const meuJson = await response.json(); 
+    console.log(meuJson);
+
+}
+
+
+var pegaToken = {
+    "url": "https://accounts.spotify.com/api/token",
+    "method": "POST",
+    "headers": {
         'Content-Type': 'application/x-www-form-urlencoded',
         'Authorization': 'Basic ' + btoa(clientId + ':' + clientSecret)
-	},
-	"data": {
-		"grant_type": "client_credentials"
-	},
+    },
+    "data": {
+        "grant_type": "client_credentials"
+    },
+    success:function (sucesso){
+    console.log('suesso', sucesso.access_token)
+    token = sucesso.access_token;
+    return token
+    }
 };
 
-$.ajax(pegaToken).done(function(response){    
-    console.log('RESPONSE: ', response.access_token);
-    tokenn = response.access_token; 
-    return tokenn  
-})          
 
-//chamando o wrapper
-// var spotifyApi = new SpotifyWebApi();
-// spotifyApi.setAccessToken('tokenn');
+$.ajax(pegaToken).done({
+    type:"GET",
+    url: 'https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg',
+    headers: {
+        'Authorization': 'Bearer ' + token,
+    },
+    sucess: function(){
+                //gazolla
+                var tabelaGaz = document.getElementById("nome-gazolla");
+                var fotoGaz = document.getElementById("foto-gazolla");
+                var seguidoresGaz = document.getElementById("seguidores-gazolla");
+                tabelaGaz.innerHTML = data.artists[0].name;
+                fotoGaz.innerHTML = '<img src="' + data.artists[0].images[2].url + '" class="img-tabela" alt="" srcset=""/>';
+                seguidoresGaz.innerHTML = spotifyIcon + data.artists[0].followers.total + '&nbspSeguidores';
+    }
+    
 
-// spotifyApi.getArtistAlbums('43ZHCT0cAZBISjO8DG9PnE', function (err, data) {
-//     if (err) console.error(err);
-//     else console.log('Artist albums', data);
-//   });
+});
+
+
+//var apenas para teste - token real
+var meuToken = 'BQDTgYVVgLHpfN6ngDG4ITpRnWJqetbV4ecgDdZzFLdIJg6ulPH_Hq-SZvH2h3_48W6lkJD60LjAG1GHLUg'
 
 $.ajax({
     type: "GET",
     url: 'https://api.spotify.com/v1/artists?ids=6MXMuAa4reykXVUPFaSE2q%2C3yujwOo5L5DZDOcGj8K9fj%2C1VD9v9T9bOrZXhfZ8ZAHK9%2C5IRGhffWFbNGJqS7wc7UDN%2C3Gmuv8ih6UWYlZQlM4zFgo%2C66DRc0RcwzeQcm1wKdDQ4o%2C4ESBMlhP8DUP0k5mIJ2xfJ%2C6QmiUgayhWQeUFTRtBzMT8%2C29fIOE8ckNq96NbZlktZ7a%2C5rOuAFH0SjUPYfw8czrNaP%2C7qd3q5BKu3lh5r0vVBWSzm%2C7aS93G9e7XG0GCUATQjqv0%2C3anHEyEBxuE2hsDhHVlzZi%2C01Vnbpcaztlxks2JFHYkME%2C1BkGeGrbRHYd8Wg2lQqJqR%2C4xMfBjNDW6VPe7W4Wly5W7',
-
+    async: 'false',
     headers: {
-        'Authorization': 'Bearer ' + 'BQB4A-v1ODyLJt_rWKEeGitZ-2n0IV8bHaBZV7W5NZJOibDItcnVIugVNFI53BxvJH03TNcXZFZh_NqN53QvRTJLOekzpiAurWWecXEDJRratN6BAyZdNT1qeD9BbuJXU-snfGHD1yS1cULJincd7rPo-meHOg',
+        'Authorization': 'Bearer ' + meuToken,
     },
     success: function (data) {
-        // console.log('Todos', data);
-        var spotifyIcon = '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M19.1,10.64C15.23,8.34,8.85,8.13,5.16,9.25A1.12,1.12,0,1,1,4.51,7.1c4.23-1.28,11.28-1,15.73,1.61a1.12,1.12,0,1,1-1.14,1.93ZM19,14a.94.94,0,0,1-1.29.31A15.73,15.73,0,0,0,5.73,13a.94.94,0,0,1-.55-1.79,17.5,17.5,0,0,1,13.48,1.6A.93.93,0,0,1,19,14ZM17.5,17.31a.75.75,0,0,1-1,.25c-2.82-1.72-6.37-2.11-10.55-1.16A.74.74,0,0,1,5,15.84a.75.75,0,0,1,.56-.9c4.57-1,8.49-.59,11.66,1.34A.75.75,0,0,1,17.5,17.31ZM12,0A12,12,0,1,0,24,12,12,12,0,0,0,12,0Z" style="fill:#fff"/></svg>&nbsp'    
 
+        
+
+        //gazolla
         var tabelaGaz = document.getElementById("nome-gazolla");
         var fotoGaz = document.getElementById("foto-gazolla");
         var seguidoresGaz = document.getElementById("seguidores-gazolla");
@@ -167,357 +200,5 @@ $.ajax({
         nomeThales.innerHTML = data.artists[15].name;
         fotoThales.innerHTML = '<img src="' + data.artists[15].images[2].url + '" class="img-tabela" alt="" srcset=""/>';
         seguidoresThales.innerHTML = spotifyIcon + data.artists[15].followers.total + '&nbspSeguidores';
-
-
-        var ftModalGazzola = document.getElementById("foto-modal-gazolla");
-        ftModalGazzola.innerHTML = '<img src="' + data.artists[0].images[1].url + '"alt="" srcset=""/>'
-        var ftModalBrn = document.getElementById("foto-modal-brn");
-        ftModalBrn.innerHTML = '<img src="' + data.artists[1].images[1].url + '"alt="" srcset=""/>'
-        var ftModalKrash = document.getElementById("foto-modal-krash");
-        ftModalKrash.innerHTML = '<img src="' + data.artists[2].images[1].url + '"alt="" srcset=""/>'
-        var ftModalJacob = document.getElementById("foto-modal-jacob");
-        ftModalJacob.innerHTML = '<img src="' + data.artists[3].images[1].url + '"alt="" srcset=""/>'
-        var ftModalPuka = document.getElementById("foto-modal-puka");
-        ftModalPuka.innerHTML = '<img src="' + data.artists[4].images[1].url + '"alt="" srcset=""/>'
-        var ftModalVoltech = document.getElementById("foto-modal-voltech");
-        ftModalVoltech.innerHTML = '<img src="' + data.artists[5].images[1].url + '"alt="" srcset=""/>'
-        var ftModalGaba = document.getElementById("foto-modal-gaba");
-        ftModalGaba.innerHTML = '<img src="' + data.artists[6].images[1].url + '"alt="" srcset=""/>'
-        var ftModalHippo = document.getElementById("foto-modal-hippo");
-        ftModalHippo.innerHTML = '<img src="' + data.artists[7].images[1].url + '"alt="" srcset=""/>'
-        var ftModalCosmonet = document.getElementById("foto-modal-cosmo");
-        ftModalCosmonet.innerHTML = '<img src="' + data.artists[8].images[1].url + '"alt="" srcset=""/>'
-        var ftModalElemental = document.getElementById("foto-modal-elemental");
-        ftModalElemental.innerHTML = '<img src="' + data.artists[9].images[1].url + '"alt="" srcset=""/>'
-        var ftModalPlastic = document.getElementById("foto-modal-plastic");
-        ftModalPlastic.innerHTML = '<img src="' + data.artists[10].images[1].url + '"alt="" srcset=""/>'
-        var ftModalVermont = document.getElementById("foto-modal-vermont");
-        ftModalVermont.innerHTML = '<img src="' + data.artists[11].images[1].url + '"alt="" srcset=""/>'
-        var ftModalRenan = document.getElementById("foto-modal-renan");
-        ftModalRenan.innerHTML = '<img src="' + data.artists[12].images[1].url + '"alt="" srcset=""/>'
-        var ftModalSofat = document.getElementById("foto-modal-sofat");
-        ftModalSofat.innerHTML = '<img src="' + data.artists[13].images[1].url + '"alt="" srcset=""/>'
-        var ftModalFlexb = document.getElementById("foto-modal-flexb");
-        ftModalFlexb.innerHTML = '<img src="' + data.artists[14].images[1].url + '"alt="" srcset=""/>'
-        var ftModalThales = document.getElementById("foto-modal-thales");
-        ftModalThales.innerHTML = '<img src="' + data.artists[15].images[1].url + '"alt="" srcset=""/>'
     }
 });
-
-//---------TOP TRACKS
-//gazolla
-$.ajax({
-    type: "GET",
-    url: 'https://api.spotify.com/v1/artists/6MXMuAa4reykXVUPFaSE2q/top-tracks?market=BR',
-    headers: {
-        'Authorization': 'Bearer ' + 'BQClsc3ZEDHKbCjuyFuB4aGYdQAm2kkADMdSqi3wgvndKfMecYvf8XEyjAhEgHp3mKRn0hU89bxKm7QumLcPeCy4RKjHmnFjOebrUaNzj2rMB2rU-t6z90WUHdhexsPD4XT8dNhNUtLUytU75lwRzneLkfFH8w'
-    },
-    success: function (data) {
-        for (i in data.tracks) {
-            var idTrack = data.tracks[i].id;
-            var trackArtista = document.getElementById("track-gazolla_" + i);
-            trackArtista.innerHTML = '<iframe src="https://open.spotify.com/embed/track/' + idTrack + '" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
-        }
-    }
-});
-
-//brn
-$.ajax({
-    type: "GET",
-    url: 'https://api.spotify.com/v1/artists/3yujwOo5L5DZDOcGj8K9fj/top-tracks?market=BR',
-    headers: {
-        'Authorization': 'Bearer ' + 'BQDtmXCkIXjB63ama2Jy6JzMTJEhT0PwSSnRjO6jp_0--IZOofTtObpofAVmOvm3AMRoAjlkY3N4WFivAk45FKGF_FddKFO1QBNHaBgKMmEaE26jfDb0hRbqPq-OdhzNRxpye_74AE15cbWYUNTFLnd5WY_WLw'
-    },
-    success: function (data) {
-        for (i in data.tracks) {
-            var idTrack = data.tracks[i].id;
-
-            var trackArtista = document.getElementById("track-brn_" + i);
-            trackArtista.innerHTML = '<iframe src="https://open.spotify.com/embed/track/' + idTrack + '" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
-        }
-
-
-    }
-});
-
-//KRASH
-$.ajax({
-    type: "GET",
-    url: 'https://api.spotify.com/v1/artists/1VD9v9T9bOrZXhfZ8ZAHK9/top-tracks?market=BR',
-
-    headers: {
-        'Authorization': 'Bearer ' + 'BQCmXZD31FDO-zkYJz6RQZHdk-Ox0g9F6dSfjENHQq2QGo84lDO17ahdIpB1_tZBnqMSdI0YvGFlf3mXzD6IqT2QBdFxkpU4jKNsIQGrUaOa3Z42VeyvNua2wOxKcgo9botp8I1x93MAwBa7ZrQgYsqBr2UJzg'
-    },
-    success: function (data) {
-        for (i in data.tracks) {
-            var idTrack = data.tracks[i].id;
-
-            var trackArtista = document.getElementById("track-krash_" + i);
-            trackArtista.innerHTML = '<iframe src="https://open.spotify.com/embed/track/' + idTrack + '" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
-        }
-
-
-    }
-});
-
-//JACOB
-$.ajax({
-    type: "GET",
-    url: 'https://api.spotify.com/v1/artists/5IRGhffWFbNGJqS7wc7UDN/top-tracks?market=BR',
-
-    headers: {
-        'Authorization': 'Bearer ' + 'BQBRaat_on9SKg3a2-q02VvrA_gPQD79CYpVuRLCqc08ioZGsFR6wYnBC7MWYNqTTlTVW_Pkg9DblO_eWzYJW42tqd4zw9I9W5AaPgOHPpp4GLkVaK7jCVaEYCLFzrPpOn-7dvf5EhTSpTOGtTqR0CWD5N-J2w'
-    },
-    success: function (data) {
-        for (i in data.tracks) {
-            var idTrack = data.tracks[i].id;
-
-            var trackArtista = document.getElementById("track-jacob_" + i);
-            trackArtista.innerHTML = '<iframe src="https://open.spotify.com/embed/track/' + idTrack + '" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
-        }
-
-
-    }
-});
-
-//PUKA
-$.ajax({
-    type: "GET",
-    url: 'https://api.spotify.com/v1/artists/3Gmuv8ih6UWYlZQlM4zFgo/top-tracks?market=BR',
-
-    headers: {
-        'Authorization': 'Bearer ' + 'BQClsI-4FnJQnFDfds_x25Yb80QiTdcIbK9iqI15e8qUaYA0N3SSXVtHGuAgTU17mvCIxMIhOwoWzFq05agi-etzHeVpHyUlQJ4uqoGQCsvk4S8mYuO49uAJs47iB01Cutk8jYfnVIBjezJ_NZntoaflT5dIsg'
-    },
-    success: function (data) {
-        for (i in data.tracks) {
-            var idTrack = data.tracks[i].id;
-
-            var trackArtista = document.getElementById("track-puka_" + i);
-            trackArtista.innerHTML = '<iframe src="https://open.spotify.com/embed/track/' + idTrack + '" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
-        }
-
-
-    }
-});
-
-//VOLTECH
-$.ajax({
-    type: "GET",
-    url: 'https://api.spotify.com/v1/artists/66DRc0RcwzeQcm1wKdDQ4o/top-tracks?market=BR',
-
-    headers: {
-        'Authorization': 'Bearer ' + 'BQAK7rjDQD7qWFq-VFHtJt_7WVRxNUF9am_5C-rmxWt7iEJvM1gW0EKy0GZaVgoFt6wkOvdeJ3Vh7wb-9HEOgDn37D0vQaa3Vd7snp7-c4wBFFDB5-cSX9D3WnTy7mlvHmv-TtOh0g9CIABKV1ozptqyDeViqw'
-    },
-    success: function (data) {
-        for (i in data.tracks) {
-            var idTrack = data.tracks[i].id;
-
-            var trackArtista = document.getElementById("track-voltech_" + i);
-            trackArtista.innerHTML = '<iframe src="https://open.spotify.com/embed/track/' + idTrack + '" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
-        }
-
-
-    }
-});
-
-//GABA
-$.ajax({
-    type: "GET",
-    url: 'https://api.spotify.com/v1/artists/4ESBMlhP8DUP0k5mIJ2xfJ/top-tracks?market=BR',
-
-    headers: {
-        'Authorization': 'Bearer ' + 'BQC24gaTnJ3vAVPj3_AXTm_k-ttX24O9DkcrKQFH53VCsxPkOUMFvinYbqjaN_cdu3jQYkCzOBJ569tl4hDMgdWYOQWWeaXEldiIoPRg_kBJM_BPFGUWEqRhW--Tk_XBiqdXwuEdjqS4qPLHg7DmPWy8bCrWhQ'
-    },
-    success: function (data) {
-        for (i in data.tracks) {
-            var idTrack = data.tracks[i].id;
-
-            var trackArtista = document.getElementById("track-gaba_" + i);
-            trackArtista.innerHTML = '<iframe src="https://open.spotify.com/embed/track/' + idTrack + '" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
-        }
-
-
-    }
-});
-
-//HIPPO
-$.ajax({
-    type: "GET",
-    url: 'https://api.spotify.com/v1/artists/6QmiUgayhWQeUFTRtBzMT8/top-tracks?market=BR',
-
-    headers: {
-        'Authorization': 'Bearer ' + 'BQDU9oD4JLP79fF1j4YbPD96-J3sAMg6Ekq0Qo-WLJnnOm2l9p5wsTyA2L2rqXtkQOg_4_595DhC2bhzfXdTgjIAugjvEycEswLB7efauikHTRobVJPBRLFMT-ViUZb4nPDaQeNqIF2IbNfTGho6Pp2bw4whrw'
-    },
-    success: function (data) {
-        for (i in data.tracks) {
-            var idTrack = data.tracks[i].id;
-
-            var trackArtista = document.getElementById("track-hippo_" + i);
-            trackArtista.innerHTML = '<iframe src="https://open.spotify.com/embed/track/' + idTrack + '" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
-        }
-
-
-    }
-});
-
-//COSMONET
-$.ajax({
-    type: "GET",
-    url: 'https://api.spotify.com/v1/artists/29fIOE8ckNq96NbZlktZ7a/top-tracks?market=BR',
-
-    headers: {
-        'Authorization': 'Bearer ' + 'BQByhICjAzOOVuL6aCHDl3dygO7v1ksT1HdkG3DvjF8_XUznMw0jaZEcHwpKFYeUkshwQSW_sbd8YMj_cBNeO5BrXoLK_HUkQ765B1U-ggIWVqJrmdllyH3C8Z4dfBtiFQQFZmRvA1LRyTiiFbml8-9-v89GVQ'
-    },
-    success: function (data) {
-        for (i in data.tracks) {
-            var idTrack = data.tracks[i].id;
-
-            var trackArtista = document.getElementById("track-cosmo_" + i);
-            trackArtista.innerHTML = '<iframe src="https://open.spotify.com/embed/track/' + idTrack + '" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
-        }
-
-
-    }
-});
-
-//ELEMENTAL
-$.ajax({
-    type: "GET",
-    url: 'https://api.spotify.com/v1/artists/5rOuAFH0SjUPYfw8czrNaP/top-tracks?market=BR',
-
-    headers: {
-        'Authorization': 'Bearer ' + 'BQAmCFX23Qo_dyEklymWV501pyezOhtkDxSeehRkCqBSFb6iMcj-n10chU54HrJjZZ2u0-gCEWPvKbb7laaVRTnFalpkXiFNrTf34Q9wtDt6zGswkpbN1bVATlaikaNZvFpVamupZW8vSYNzKM3SSZhq7AoMnA'
-    },
-    success: function (data) {
-        for (i in data.tracks) {
-            var idTrack = data.tracks[i].id;
-
-            var trackArtista = document.getElementById("track-elemental_" + i);
-            trackArtista.innerHTML = '<iframe src="https://open.spotify.com/embed/track/' + idTrack + '" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
-        }
-
-
-    }
-});
-
-//PLASTIC
-$.ajax({
-    type: "GET",
-    url: 'https://api.spotify.com/v1/artists/7qd3q5BKu3lh5r0vVBWSzm/top-tracks?market=BR',
-
-    headers: {
-        'Authorization': 'Bearer ' + 'BQD_8I0Xk9wUmRWACEhmQ26KUkasNEKYB_Kbcr8mv49Y7k92TnPXjz-7EYAYEeL_xskch80KfwV_p2IzKNA0uCpQumVap-O7Zv_YepTK9fj8wkQwmBN0VGld6G0gtzQOb9MYZuylQC8JNS5avGiqRkKSooJjiQ'
-    },
-    success: function (data) {
-        for (i in data.tracks) {
-            var idTrack = data.tracks[i].id;
-
-            var trackArtista = document.getElementById("track-plastic_" + i);
-            trackArtista.innerHTML = '<iframe src="https://open.spotify.com/embed/track/' + idTrack + '" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
-        }
-
-
-    }
-});
-
-//VERMONT
-$.ajax({
-    type: "GET",
-    url: 'https://api.spotify.com/v1/artists/7aS93G9e7XG0GCUATQjqv0/top-tracks?market=BR',
-
-    headers: {
-        'Authorization': 'Bearer ' + 'BQD_8I0Xk9wUmRWACEhmQ26KUkasNEKYB_Kbcr8mv49Y7k92TnPXjz-7EYAYEeL_xskch80KfwV_p2IzKNA0uCpQumVap-O7Zv_YepTK9fj8wkQwmBN0VGld6G0gtzQOb9MYZuylQC8JNS5avGiqRkKSooJjiQ'
-    },
-    success: function (data) {
-        for (i in data.tracks) {
-            var idTrack = data.tracks[i].id;
-
-            var trackArtista = document.getElementById("track-vermont_" + i);
-            trackArtista.innerHTML = '<iframe src="https://open.spotify.com/embed/track/' + idTrack + '" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
-        }
-
-
-    }
-});
-
-
-//RENAN
-$.ajax({
-    type: "GET",
-    url: 'https://api.spotify.com/v1/artists/3anHEyEBxuE2hsDhHVlzZi/top-tracks?market=BR',
-
-    headers: {
-        'Authorization': 'Bearer ' + 'BQD5GOTI7ShLwq7hWY41sm-ap7BuyXrhxgO47UFIZDZr01oLMYIOOKFrtkCPoJPyFSmjVSNuBGk7K3fDl_0oaXA0ExovM2YhSikGz-ucTQnCt7A31-kM5ZNP9rFJMxO_3QqZTKewBabx5WKc7rScBIgHlHDjbw'
-    },
-    success: function (data) {
-        for (i in data.tracks) {
-            var idTrack = data.tracks[i].id;
-
-            var trackArtista = document.getElementById("track-renan_" + i);
-            trackArtista.innerHTML = '<iframe src="https://open.spotify.com/embed/track/' + idTrack + '" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
-        }
-
-
-    }
-});
-
-//SOFAT
-$.ajax({
-    type: "GET",
-    url: 'https://api.spotify.com/v1/artists/01Vnbpcaztlxks2JFHYkME/top-tracks?market=BR',
-
-    headers: {
-        'Authorization': 'Bearer ' + 'BQBcwOs60HSpXpK7rs6JJwVMY3zoEJzulYFoL8RjQYHffyuVo2d7hlkWGg0sWzR8h_WROS56Q4h8vjtx_gS0WFR0N9gg3M-HGyBky7QRbRvHKsj3D61QnOY5B-V97dua2huFvWm1GBuDhXekhD4WwTW2Q70VfQ'
-    },
-    success: function (data) {
-        for (i in data.tracks) {
-            var idTrack = data.tracks[i].id;
-
-            var trackArtista = document.getElementById("track-sofat_" + i);
-            trackArtista.innerHTML = '<iframe src="https://open.spotify.com/embed/track/' + idTrack + '" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
-        }
-
-
-    }
-});
-
-//FLEXB
-$.ajax({
-    type: "GET",
-    url: 'https://api.spotify.com/v1/artists/1BkGeGrbRHYd8Wg2lQqJqR/top-tracks?market=BR',
-
-    headers: {
-        'Authorization': 'Bearer ' + 'BQAD8ohmN_5ZoLIFg8yXuGDnVogSVA5_SFp0RMwW6GD8GRDa20vNMt36k1GHlLms1RtzymCgwnfKkZ7j39EUExiapucrxolhLKH93xET-K_C-KfBLwbl6Wc17kuVc6ycD7MSK0XMOPAz1vkBAqhCEaNzBgpPOg'
-    },
-    success: function (data) {
-        for (i in data.tracks) {
-            var idTrack = data.tracks[i].id;
-
-            var trackArtista = document.getElementById("track-flexb_" + i);
-            trackArtista.innerHTML = '<iframe src="https://open.spotify.com/embed/track/' + idTrack + '" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
-        }
-
-
-    }
-});
-
-//THALES
-$.ajax({
-    type: "GET",
-    url: 'https://api.spotify.com/v1/artists/4xMfBjNDW6VPe7W4Wly5W7/top-tracks?market=BR',
-
-    headers: {
-        'Authorization': 'Bearer ' + 'BQBmFeG46FnBWkvKM9pYGwSJDd8_amct-U0uk1azO_uKUAWzh-G3PToORWmczG_d9gB_JhhvXOt9GhILTx9XYB9dj0XUXKXPwWq8O5FACu-xMqdvl1vEjZRzkv1AKO3u-MaMwpB0gaJg8pis_c4rK2Et6nJlKg'
-    },
-    success: function (data) {
-        for (i in data.tracks) {
-            var idTrack = data.tracks[i].id;
-
-            var trackArtista = document.getElementById("track-thales_" + i);
-            trackArtista.innerHTML = '<iframe src="https://open.spotify.com/embed/track/' + idTrack + '" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
-        }
-
-
-    }
-});
-
