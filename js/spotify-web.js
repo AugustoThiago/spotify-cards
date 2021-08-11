@@ -18,7 +18,6 @@ const pegaToken = (function () {
         .then(token => {
             console.log('sucesso token :', token.access_token);
             spotifyApi.setAccessToken(token.access_token);
-
             spotifyApi
                 .getArtists([
                     '6MXMuAa4reykXVUPFaSE2q',
@@ -41,7 +40,7 @@ const pegaToken = (function () {
                 .then(
                     function (data) {
                         console.log('Artistas Infos', data);
-                        
+
                         //gazolla
                         var tabelaGaz = document.getElementById("nome-gazolla");
                         var fotoGaz = document.getElementById("foto-gazolla");
@@ -176,7 +175,4 @@ const pegaToken = (function () {
                 );
         })
         .catch(error => console.log(error));
-
-
-
 })();
