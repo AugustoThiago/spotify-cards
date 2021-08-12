@@ -10,6 +10,15 @@ img.img-tabela {
   object-fit: cover;
 }
 
+.card{
+  border: 1px solid rgba(0,0,0,0) !important;
+  border-radius: .25rem;
+}
+
+.card-body{
+  background-color: #121414 !important;
+}
+
 .base-card {
   position: relative;
 }
@@ -197,4 +206,52 @@ img.img-tabela {
 
 .card-header:first-child{
   border-radius: calc(3.3rem - 1px) calc(0.25rem - 2px) 0 0;
+}
+
+.modal {
+	z-index: 99999;
+}
+
+.modal-header{
+  border-bottom: 1px solid #2d2a1f !important;
+}
+.modal-footer{
+  border-top: 1px solid #2d2a1f!important;
+  color:#fbb034;    
+}
+
+.modal-content {
+  background-color: #121414 !important;
+  border: none;
+  border-radius: 1.3rem !important;
+}
+.btn-primary{
+  background-color: #fbb034;
+  background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+  border-style: none !important;
+  color:#000000 !important;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgb(251 182 45 / 50%) !important;
+}
+
+.btn-group-lg>.btn, .btn-lg{
+  margin: 20px !important;
+}
+
+.txt-bio{
+  color: #fff;
+  margin: 10px 40px;
+  background-color: #1a1a1a;
+  padding: 20px;
+}
+.modal-header .close{
+  color: #fbb034;
+}
+.close:not(:disabled):not(.disabled):focus, .close:not(:disabled):not(.disabled):hover{
+  color: #fedc3d !important;
+} 
+p.text-center{
+  margin: auto;
 }
