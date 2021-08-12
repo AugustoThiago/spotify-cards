@@ -3,7 +3,7 @@ const spotifyIcon = '<svg width="24" height="24" xmlns="http://www.w3.org/2000/s
 const clientId = '';
 const clientSecret = '';
 
-const pegaToken = (function () {
+const cardArtistas = (function () {
     fetch('https://accounts.spotify.com/api/token', {
             method: "POST",
             headers: {
@@ -39,7 +39,7 @@ const pegaToken = (function () {
                 ])
                 .then(
                     function (data) {
-                        console.log('Artistas Infos', data);
+                        // console.log('Artistas Infos', data);
 
                         //gazolla
                         var tabelaGaz = document.getElementById("nome-gazolla");
@@ -176,3 +176,25 @@ const pegaToken = (function () {
         })
         .catch(error => console.log(error));
 })();
+
+function topTracksGazolla() {
+    spotifyApi.getArtistTopTracks('6MXMuAa4reykXVUPFaSE2q', 'BR').then(
+        function (data) {
+            console.log('Tracks', data);
+
+            // var ftModalGazzola = document.getElementById("foto-modal-gazolla");
+            // ftModalGazzola.innerHTML = '<img src="' + data.artists[0].images[1].url + '"alt="" srcset=""/>'
+
+            console.log('ooi', data.tracks.id);
+
+            for (i in data.tracks) {
+                var idTrack = data.tracks[i].id;
+                var trackArtista = document.getElementById("track-gazolla_" + i);
+                trackArtista.innerHTML = '<iframe src="https://open.spotify.com/embed/track/' + idTrack + '" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
+            }
+        },
+        function (err) {
+            console.error(err);
+        }
+    );
+}
