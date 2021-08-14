@@ -177,16 +177,30 @@ const cardArtistas = (function () {
         .catch(error => console.log(error));
 })();
 
-function topTracksGazolla() {
-    spotifyApi.getArtistTopTracks('6MXMuAa4reykXVUPFaSE2q', 'BR').then(
+function infosGazolla() {
+    
+    const idGazolla = '6MXMuAa4reykXVUPFaSE2q';
+
+    spotifyApi.getArtist(idGazolla).then(
         function (data) {
-            console.log('Tracks', data);
-
-            // var ftModalGazzola = document.getElementById("foto-modal-gazolla");
-            // ftModalGazzola.innerHTML = '<img src="' + data.artists[0].images[1].url + '"alt="" srcset=""/>'
-
-            console.log('ooi', data.tracks.id);
-
+            console.log('infos', data);            
+            var ftHeadGazolla = document.getElementById("header-foto-gazolla");
+            ftHeadGazolla.style.backgroundImage = 'url(' + data.images[0].url + ')'
+            ftHeadGazolla.style.borderRadius = '20px 20px 0px 0px';
+            // ftHeadGazolla.style.filter = "blur(4px)";
+            var nmArtista = document.getElementById("name-art-gazolla");
+            nmArtista.innerHTML = data.name;
+            
+            var avatarArtista = document.getElementById("foto-modal");
+            avatarArtista.innerHTML = '<img src="' + data.images[0].url + '" class="ft-modal" alt="" srcset=""/>';
+        },
+        function (err) {
+            console.error(err);
+        }
+    );
+    
+    spotifyApi.getArtistTopTracks(idGazolla, 'BR').then(
+        function (data) {
             for (i in data.tracks) {
                 var idTrack = data.tracks[i].id;
                 var trackArtista = document.getElementById("track-gazolla_" + i);

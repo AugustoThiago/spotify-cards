@@ -10,6 +10,35 @@ img.img-tabela {
   object-fit: cover;
 }
 
+.ft-modal{
+  width: 220px;
+  height: 220px;
+  border: 10px solid #fedc3d;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: drop-shadow(0 0 0.75rem black);
+}
+
+button.close {
+  background-color: #fbb034;
+  background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+}
+.close{
+  font-size: 2rem;
+  text-shadow: none !important;
+  opacity: 1 !important;
+  color: #000000 !important;
+  border-radius:5px
+}
+p.text-center{
+  margin: auto;
+}
+
+.modal-header > img {
+  margin: auto;
+  height: 1300px;
+}
+
 .card{
   border: 1px solid rgba(0,0,0,0) !important;
   border-radius: .25rem;
@@ -214,9 +243,19 @@ img.img-tabela {
 
 .modal-header{
   border-bottom: 1px solid #2d2a1f !important;
+  padding: 0px !important;
+  background-size: cover;
+  height: 250px;
+  background-position: center;
+}
+
+.modal-title{
+  color: #fedc3d;
+  padding: 10px;
 }
 .modal-footer{
   border-top: 1px solid #2d2a1f!important;
+  border-radius: 0px 0px 15px 15px;
   color:#fbb034;    
 }
 
@@ -245,13 +284,18 @@ img.img-tabela {
   margin: 10px 40px;
   background-color: #1a1a1a;
   padding: 20px;
+  border-radius:15px;
 }
 .modal-header .close{
   color: #fbb034;
 }
 .close:not(:disabled):not(.disabled):focus, .close:not(:disabled):not(.disabled):hover{
-  color: #fedc3d !important;
+  color: #fff !important;
 } 
-p.text-center{
+.ft-infos{
+  z-index: 999999;
+  width: 100%;
   margin: auto;
+  padding: 20px 0;
+  position: absolute;
 }
